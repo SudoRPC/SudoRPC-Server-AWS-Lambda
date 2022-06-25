@@ -1,3 +1,3 @@
-# SudoRPC-Server-AWS-Lambda
+# SudoRPC-TypeScript-Server-AWS-Lambda
 
 AWS Lambda Server for SudoRPC
