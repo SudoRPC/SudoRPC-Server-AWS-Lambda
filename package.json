@@ -1,0 +1,40 @@
+{
+  "name": "@sudorpc/server-aws-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda Server for SudoRPC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoRPC/SudoRPC-TypeScript-Server-AWS-Lambda.git"
+  },
+  "keywords": [
+    "RPC"
+  ],
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SudoRPC/SudoRPC-TypeScript-Server-AWS-Lambda/issues"
+  },
+  "homepage": "https://github.com/SudoRPC/SudoRPC-TypeScript-Server-AWS-Lambda#readme",
+  "peerDependencies": {
+    "@sudorpc/core": "*"
+  },
+  "devDependencies": {
+    "@sudoo/triforce": "^3.7.0",
+    "@sudorpc/core": "^1.1.0"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "sourceMap": true
+  }
+}
