@@ -7,6 +7,8 @@
 
 AWS Lambda Server for SudoRPC
 
+## Install
+
 ```sh
 yarn add @sudorpc/server-aws-lambda
 yarn add @sudorpc/core # Peer Dependency
