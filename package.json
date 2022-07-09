@@ -1,6 +1,6 @@
 {
   "name": "@sudorpc/server-aws-lambda",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AWS Lambda Server for SudoRPC",
   "repository": {
     "type": "git",
