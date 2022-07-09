@@ -15,12 +15,21 @@
     "url": "https://github.com/SudoRPC/SudoRPC-TypeScript-Server-AWS-Lambda/issues"
   },
   "homepage": "https://github.com/SudoRPC/SudoRPC-TypeScript-Server-AWS-Lambda#readme",
+  "dependencies": {
+    "@sudoo/lambda": "^2.0.0",
+    "@sudoo/lambda-verify": "^1.5.0",
+    "@sudoo/magic": "^1.9.0",
+    "@sudoo/pattern": "^1.10.0",
+    "@sudoo/verify": "^1.19.0",
+    "@sudorpc/pattern": "^1.1.0"
+  },
   "peerDependencies": {
     "@sudorpc/core": "*"
   },
   "devDependencies": {
     "@sudoo/triforce": "^3.7.0",
-    "@sudorpc/core": "^1.1.0"
+    "@sudorpc/core": "^1.1.0",
+    "@types/aws-lambda": "^8.10.101"
   },
   "nyc": {
     "extension": [
