@@ -6,7 +6,6 @@
  */
 
 import { HTTP_RESPONSE_CODE } from "@sudoo/magic";
-import { createAnyPattern } from "@sudoo/pattern";
 import { SudoRPCCall, SudoRPCService } from "@sudorpc/core";
 import { expect } from "chai";
 import * as Chance from "chance";
@@ -23,8 +22,6 @@ describe('Given [createSudoRPCServerAWSLambdaAPIGatewayHandler] Helper Methods',
         const service: SudoRPCService<any, any, any, any> = createEchoerService();
         const handler = createSudoRPCServerAWSLambdaAPIGatewayHandler(
             service,
-            createAnyPattern(),
-            createAnyPattern(),
             DefaultResponseCodeMaker,
         );
 
@@ -73,8 +70,6 @@ describe('Given [createSudoRPCServerAWSLambdaAPIGatewayHandler] Helper Methods',
         const service: SudoRPCService<any, any, any, any> = createEchoerService();
         const handler = createSudoRPCServerAWSLambdaAPIGatewayHandler(
             service,
-            createAnyPattern(),
-            createAnyPattern(),
             DefaultResponseCodeMaker,
         );
 
@@ -109,8 +104,6 @@ describe('Given [createSudoRPCServerAWSLambdaAPIGatewayHandler] Helper Methods',
         const service: SudoRPCService<any, any, any, any> = createEchoerService();
         const handler = createSudoRPCServerAWSLambdaAPIGatewayHandler(
             service,
-            createAnyPattern(),
-            createAnyPattern(),
             DefaultResponseCodeMaker,
         );
 

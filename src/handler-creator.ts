@@ -4,7 +4,6 @@
  * @description Handler Creator
  */
 
-import { createAnyPattern, Pattern } from "@sudoo/pattern";
 import { SudoRPCService } from "@sudorpc/core";
 import { APIGatewayProxyHandler } from "aws-lambda";
 import { APIGatewayResponseCodeMaker, DefaultResponseCodeMaker } from "./declare/api-gateway";
@@ -21,26 +20,11 @@ export class SudoRPCServerAWSLambdaHandlerCreator<Metadata, Payload, SuccessResu
 
     private readonly _service: SudoRPCService<Metadata, Payload, SuccessResult, FailResult>;
 
-    private _metadataPattern: Pattern = createAnyPattern();
-    private _payloadPattern: Pattern = createAnyPattern();
-
     private constructor(
         service: SudoRPCService<Metadata, Payload, SuccessResult, FailResult>,
     ) {
 
         this._service = service;
-    }
-
-    public withMetadataPattern(pattern: Pattern): this {
-
-        this._metadataPattern = pattern;
-        return this;
-    }
-
-    public withPayloadPattern(pattern: Pattern): this {
-
-        this._payloadPattern = pattern;
-        return this;
     }
 
     public createAPIGatewayHandler(
@@ -50,8 +34,6 @@ export class SudoRPCServerAWSLambdaHandlerCreator<Metadata, Payload, SuccessResu
 
         return createSudoRPCServerAWSLambdaAPIGatewayHandler(
             this._service,
-            this._metadataPattern,
-            this._payloadPattern,
             responseCodeMaker,
         );
     }
